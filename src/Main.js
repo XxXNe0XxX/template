@@ -4,13 +4,29 @@ const Main = () => {
   const [visibleId, setVisibleId] = useState(null);
 
   const languages = [
-    { name: "HTML", location: "/images/HtmlLogo.png", animationDuration: 0.2 },
-    { name: "CSS", location: "/images/CssLogo.png", animationDuration: 0.5 },
-    { name: "JAVA", location: "/images/JavaLogo.png", animationDuration: 0.8 },
+    {
+      name: "HTML",
+      location: "/images/HtmlLogo.png",
+      animationDuration: 0.2,
+      animationParams: 50,
+    },
+    {
+      name: "CSS",
+      location: "/images/CssLogo.png",
+      animationDuration: 0.4,
+      animationParams: 60,
+    },
+    {
+      name: "JAVA",
+      location: "/images/JavaLogo.png",
+      animationDuration: 0.6,
+      animationParams: 70,
+    },
     {
       name: "PYTHON",
       location: "/images/PythonLogo.png",
-      animationDuration: 1,
+      animationDuration: 0.8,
+      animationParams: 80,
     },
   ];
   const logos = [
@@ -91,7 +107,8 @@ const Main = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: each.animationDuration, ease: "easeOut" }}
+            transition={{ duration: each.animationDuration }}
+            viewport={{ once: true }}
             onClick={() => toggleDescription(each.id)}
             className="flex cursor-pointer z-10 p-2 lg:w-[13vw] whitespace-normal   flex-col group  lg:items-start justify-end  "
           >
@@ -105,6 +122,7 @@ const Main = () => {
             group-hover:bg-white transition-all`}
             >
               <img
+                alt={`${each.name} logo`}
                 src={each.logoSrc}
                 className={`${each.size} ${each.styles} `}
               />
@@ -142,13 +160,14 @@ const Main = () => {
           <h1 className="text-2xl  ">Languages</h1>
           {languages.map((each) => (
             <motion.li
-              initial={{ opacity: 0, x: 150 }}
+              initial={{ opacity: 0, x: each.animationParams }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: each.animationDuration }}
+              viewport={{ once: true }}
               className="p-2  relative transition-all group-hover:shadow-xl justify-between flex  text-2xl w-full group text-white group "
             >
               <div className="w-20  flex justify-center  rounded-xl bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-70 border border-gray-100 shadow-xl z-0 group-hover:border-white transition-all group-hover:w-full    ">
                 <img
+                  alt={`${each.name} language`}
                   className=" group-hover:bg-white p-5 group-hover:scale-125 transition-all
                   rounded-md max-h-20 min-w-max "
                   src={each.location}
