@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 
 const icons = [
   {
+    id: 1,
     name: "Hire",
     icon: <BsBriefcaseFill />,
     description: "Available for hiring",
@@ -14,6 +15,7 @@ const icons = [
     styles: "border-green-400 bg-green-200 ",
   },
   {
+    id: 2,
     name: "LinkedIn",
     icon: <BsLinkedin />,
     description: "LinkedIn",
@@ -21,6 +23,7 @@ const icons = [
     styles: " hover:bg-blue-800 hover:text-white ",
   },
   {
+    id: 3,
     name: "GitHub",
     icon: <BsGithub />,
     description: "GitHub",
@@ -28,6 +31,7 @@ const icons = [
     styles: "hover:bg-gray-800 hover:text-white",
   },
   {
+    id: 4,
     name: "Whatsapp",
     icon: <BsWhatsapp />,
     description: "WhatsApp",
@@ -35,6 +39,7 @@ const icons = [
     styles: "hover:bg-green-800 hover:text-white",
   },
   {
+    id: 5,
     name: "email",
     icon: <HiMailOpen />,
     description: "jjssiilleess@gmail.com ",
@@ -70,7 +75,7 @@ const Footer = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="border shadow-lg p-4    border-gray-300 text-2xl rounded-md bg-white h-[70vh] lg:w-[20vw] flex justify-between content-around  items-center flex-col "
+          className="border shadow-lg p-4  border-gray-300 text-2xl rounded-md bg-white h-[70vh] lg:w-[20vw] flex justify-between content-around  items-center flex-col "
         >
           <div className="rounded-full w-40 h-40 overflow-hidden flex content-center justify-center items-center align-middle  shadow-lg drop-shadow border-2 border-green-300">
             <img alt="profile" className="" src="/images/Pepi.jpg"></img>
@@ -79,14 +84,16 @@ const Footer = () => {
           <p className="text-sm mb-4 text-gray-500">Descripcion corta aqui</p>
           <div className="flex justify-center w-fit font-thin flex-col space-y-4 ">
             {icons.map((each) => (
-              <a href={each.link} target={each.link}>
-                <div
-                  className={`${each.styles} flex border  p-2    items-center  rounded-md transition-all gap-x-9`}
-                >
-                  {each.icon}
-                  <p className="text-sm">{each.description}</p>
-                </div>
-              </a>
+              <div key={each.id}>
+                <a href={each.link} target={each.link}>
+                  <div
+                    className={`${each.styles} flex border  p-2    items-center  rounded-md transition-all gap-x-9`}
+                  >
+                    {each.icon}
+                    <p className="text-sm">{each.description}</p>
+                  </div>
+                </a>
+              </div>
             ))}
           </div>
         </motion.div>

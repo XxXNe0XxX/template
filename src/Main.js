@@ -5,24 +5,28 @@ const Main = () => {
 
   const languages = [
     {
+      id: 1,
       name: "HTML",
       location: "/images/HtmlLogo.png",
       animationDuration: 0.2,
       animationParams: 50,
     },
     {
+      id: 2,
       name: "CSS",
       location: "/images/CssLogo.png",
       animationDuration: 0.4,
       animationParams: 60,
     },
     {
+      id: 3,
       name: "JAVA",
       location: "/images/JavaLogo.png",
       animationDuration: 0.6,
       animationParams: 70,
     },
     {
+      id: 4,
       name: "PYTHON",
       location: "/images/PythonLogo.png",
       animationDuration: 0.8,
@@ -105,6 +109,7 @@ const Main = () => {
 
         {logos.map((each) => (
           <motion.div
+            key={each.id}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: each.animationDuration }}
@@ -160,6 +165,7 @@ const Main = () => {
           <h1 className="text-2xl  ">Languages</h1>
           {languages.map((each) => (
             <motion.li
+              key={each.id}
               initial={{ opacity: 0, x: each.animationParams }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
