@@ -73,7 +73,7 @@ const Main = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br p-6  from-black to-gray-600 bg-gradient-to-r min-h-screen h-fit ">
+    <div className="bg-gradient-from-br p-6  from-black to-gray-600 bg-gradient-to-r min-h-screen h-fit ">
       <h1 className="text-5xl text-left text-white p-10">My Skillset</h1>
 
       <ul className="flex  shadow-2xl  overflow-hidden lg:mx-auto w-[90vw]  rounded-lg border-2 border-gray-700 p-6 mx-auto lg:justify-around  flex-wrap text-white gap-x-2   ">
