@@ -1,13 +1,17 @@
 import { useState } from "react";
-
+import { motion } from "framer-motion";
 const Main = () => {
   const [visibleId, setVisibleId] = useState(null);
 
   const languages = [
-    { name: "HTML", location: "/images/HtmlLogo.png" },
-    { name: "CSS", location: "/images/CssLogo.png" },
-    { name: "JAVA", location: "/images/JavaLogo.png" },
-    { name: "PYTHON", location: "/images/PythonLogo.png" },
+    { name: "HTML", location: "/images/HtmlLogo.png", animationDuration: 0.2 },
+    { name: "CSS", location: "/images/CssLogo.png", animationDuration: 0.5 },
+    { name: "JAVA", location: "/images/JavaLogo.png", animationDuration: 0.8 },
+    {
+      name: "PYTHON",
+      location: "/images/PythonLogo.png",
+      animationDuration: 1,
+    },
   ];
   const logos = [
     {
@@ -17,6 +21,7 @@ const Main = () => {
       size: "lg:w-1/2",
       styles: "",
       description: "Overall git commands, working in teams",
+      animationDuration: 0.2,
     },
     {
       id: 2,
@@ -25,6 +30,7 @@ const Main = () => {
       size: "lg:w-4/5 ",
       styles: " ",
       description: "@tanstack/react-query, react-router-dom ",
+      animationDuration: 0.4,
     },
     {
       id: 3,
@@ -33,6 +39,7 @@ const Main = () => {
       size: "lg:mt-4 lg:w-4/5 ",
       styles: "",
       description: "Añade descripcion",
+      animationDuration: 0.6,
     },
     {
       id: 4,
@@ -41,6 +48,7 @@ const Main = () => {
       size: "lg:w-full ",
       styles: "",
       description: "Añade descripcion",
+      animationDuration: 0.8,
     },
   ];
 
@@ -80,9 +88,12 @@ const Main = () => {
         </div>
 
         {logos.map((each) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: each.animationDuration, ease: "easeOut" }}
             onClick={() => toggleDescription(each.id)}
-            className="flex  z-10 p-2 lg:w-[13vw] whitespace-normal   flex-col group  lg:items-start justify-end  "
+            className="flex cursor-pointer z-10 p-2 lg:w-[13vw] whitespace-normal   flex-col group  lg:items-start justify-end  "
           >
             <div className="group-hover:w-full   self-center w-0 group-hover:bg-cyan-400 bg-white h-2 transition-all rounded-xl  "></div>
             <p className="text-start mb-2 flex items-end h-24 md:text-lg lg:text-2xl   max-w-xs text-base">
@@ -90,7 +101,7 @@ const Main = () => {
             </p>
 
             <li
-              className={`relative overflow-hidden flex flex-col h-[30vh] w-full lg:w-full justify-center items-center rounded-xl bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-50 border border-gray-100 shadow-xl text-black 
+              className={`relative  overflow-hidden flex flex-col h-[30vh] w-full lg:w-full justify-center items-center rounded-xl bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-50 border border-gray-100 shadow-xl text-black 
             group-hover:bg-white transition-all`}
             >
               <img
@@ -102,7 +113,9 @@ const Main = () => {
                      "
               >
                 {visibleId === each.id ? (
-                  <p
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     className="
                      
                     shadow-xl
@@ -114,21 +127,26 @@ const Main = () => {
                     "
                   >
                     {each.description}
-                  </p>
+                  </motion.p>
                 ) : (
-                  <p className=" cursor-pointer group-hover:text-black   text-white rounded-lg p-2 m-2 whitespace-nowrap  ">
+                  <p className=" cursor-pointer font-roboto group-hover:text-black   text-white rounded-lg p-2 m-2 whitespace-nowrap  ">
                     See more...
                   </p>
                 )}
               </div>
             </li>
-          </div>
+          </motion.div>
         ))}
 
         <ul className="flex z-10 p-2  lg:py-0 items-start py-10 w-full flex-col  lg:w-[20vw]  gap-3 text-white ">
           <h1 className="text-2xl  ">Languages</h1>
           {languages.map((each) => (
-            <li className="p-2  relative transition-all group-hover:shadow-xl justify-between flex  text-2xl w-full group text-white group ">
+            <motion.li
+              initial={{ opacity: 0, x: 150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: each.animationDuration }}
+              className="p-2  relative transition-all group-hover:shadow-xl justify-between flex  text-2xl w-full group text-white group "
+            >
               <div className="w-20  flex justify-center  rounded-xl bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-70 border border-gray-100 shadow-xl z-0 group-hover:border-white transition-all group-hover:w-full    ">
                 <img
                   className=" group-hover:bg-white p-5 group-hover:scale-125 transition-all
@@ -139,7 +157,7 @@ const Main = () => {
               <h1 className="opacity-0 absolute w-fit right-0 text-right font-semibold z-0 group-hover:opacity-100 text-sm mr-4 rounded-xl text-black bg-white group-hover:w-fit transition-opacity px-3 py-1 self-center ">
                 {each.name}
               </h1>
-            </li>
+            </motion.li>
           ))}
         </ul>
       </ul>
