@@ -57,6 +57,7 @@ const Footer = () => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
           className="p-12 border shadow-lg lg:max-w-[50vw] border-gray-300 rounded-md bg-white  "
         >
           <p className="text-left leading-8 whitespace-normal ">

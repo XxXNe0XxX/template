@@ -13,7 +13,7 @@ const Header = () => {
       </motion.h1>
 
       <div className="flex items-center justify-start space-x-2">
-        <div className="w-4 h-[3em]  animate-bounce min-w-4 min-h-8 transition-all duration-75 shadow-yellow-300 box-shadow hover:shadow-inner hover:shadow-black rounded-full self-end bg-yellow-400"></div>
+        <div className="w-4 h-[3em] ml-2 animate-bounce min-w-4 min-h-8 transition-all duration-75 shadow-yellow-300 box-shadow hover:shadow-inner hover:shadow-black rounded-full self-end bg-yellow-400"></div>
         <p className="text-6xl tracking-tight font-roboto text-gray-600 self-center ">
           Software developer
         </p>
