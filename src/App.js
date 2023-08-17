@@ -1,29 +1,27 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import Main from "./Main";
-import Navbar from "./Navbar";
 import Projects from "./Projects";
 import BlogPosts from "./BlogPosts";
 
 const App = () => {
   return (
-    <div className=" relative bg-gradient-to-b from-gray-200 to-white overflow-scroll h-screen snap-y snap-mandatory">
-      <div className="absolute w-full ">
-        <Navbar></Navbar>
-      </div>
+    <div className="no-scrollbar relative bg-gradient-from-br   from-black to-gray-800 overflow-scroll h-screen snap-y snap-mandatory">
       <div id="header" className=" snap-start">
         <Header></Header>
         <hr className="h-1 absolute mx-auto rounded-md w-full bg-gray-400 " />
       </div>
       <div id="main" className="snap-start">
         <Main></Main>
-        <hr className="h-1 absolute mx-auto bg-gray-400 w-full rouded-md" />
+        {/* <hr className="h-1 absolute mx-auto bg-gray-400 w-full rouded-md" /> */}
       </div>
-      <div div id="main" className="snap-start">
+      <div id="projects" className="snap-start">
         <Projects></Projects>
+        {/* <hr className="h-1 absolute mx-auto bg-gray-400 w-full rouded-md" /> */}
       </div>
-      <div div id="main" className="snap-start">
+      <div id="blogPosts" className="snap-start">
         <BlogPosts></BlogPosts>
+        {/* <hr className="h-1 absolute mx-auto bg-gray-400 w-full rouded-md" /> */}
       </div>
       <div id="footer" className=" snap-start">
         <Footer></Footer>

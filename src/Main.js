@@ -77,8 +77,10 @@ const Main = () => {
   };
 
   return (
-    <div className="bg-gradient-from-br p-6  from-black to-gray-600 bg-gradient-to-r min-h-screen h-fit ">
-      <h1 className="text-5xl text-left text-white p-10">My Skillset</h1>
+    <div className="bg-gradient-from-br p-6  from-black to-gray-800 bg-gradient-to-br min-h-screen h-fit ">
+      <h1 className="text-5xl text-left font-roboto tracking-tight text-white p-10">
+        My Skillset
+      </h1>
 
       <ul className="flex  shadow-2xl  overflow-hidden lg:mx-auto w-[90vw]  rounded-lg border-2 border-gray-700 p-6 mx-auto lg:justify-around  flex-wrap text-white gap-x-2   ">
         <div className=" relative sm:flex sm:flex-col justify-center     mx-auto lg:w-full ">
@@ -123,7 +125,7 @@ const Main = () => {
             </p>
 
             <li
-              className={`relative  overflow-hidden flex flex-col h-[30vh] w-full lg:w-full justify-center items-center rounded-xl bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-50 border border-gray-100 shadow-xl text-black 
+              className={`relative  overflow-hidden flex flex-col h-[30vh] w-full lg:w-full justify-center items-center rounded-xl  border border-gray-100 shadow-xl text-black 
             group-hover:bg-white transition-all`}
             >
               <img
@@ -140,7 +142,7 @@ const Main = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     className="
-                     
+                    
                     shadow-xl
                     h-18 
                     rounded-md 
