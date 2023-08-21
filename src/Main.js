@@ -77,7 +77,7 @@ const Main = () => {
   };
 
   return (
-    <div className="bg-gradient-from-br p-6  from-black to-gray-800 bg-gradient-to-br min-h-screen h-fit ">
+    <div className=" p-6  from-black to-gray-800 bg-gradient-to-br  min-h-screen h-fit ">
       <h1 className="text-5xl text-left font-roboto tracking-tight text-white p-10">
         My Skillset
       </h1>

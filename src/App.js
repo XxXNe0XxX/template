@@ -3,10 +3,11 @@ import Footer from "./Footer";
 import Main from "./Main";
 import Projects from "./Projects";
 import BlogPosts from "./BlogPosts";
+import Example from "./Example";
 
 const App = () => {
   return (
-    <div className="no-scrollbar relative bg-gradient-from-br   from-black to-gray-800 overflow-scroll h-screen snap-y snap-mandatory">
+    <div className="no-scrollbar background-animate relative bg-gradient-from-br   from-black to-gray-800 overflow-scroll h-screen snap-y snap-mandatory">
       <div id="header" className=" snap-start">
         <Header></Header>
         <hr className="h-1 absolute mx-auto rounded-md w-full bg-gray-400 " />
@@ -25,6 +26,9 @@ const App = () => {
       </div>
       <div id="footer" className=" snap-start">
         <Footer></Footer>
+      </div>
+      <div id="example" className=" snap-start">
+        <Example></Example>
       </div>
       <div className="snap-start "></div>
     </div>
