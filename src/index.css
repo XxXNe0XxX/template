@@ -67,8 +67,14 @@ body {
   0% {
     background-position: 0% 50%;
   }
+  25% {
+    background-position: 50% 75%;
+  }
   50% {
-    background-position: 25% 50%;
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 75% 25%;
   }
   100% {
     background-position: 0% 50%;
@@ -76,11 +82,11 @@ body {
 }
 
 .inner-background {
-  background: linear-gradient(
-    44.8deg,
-    rgba(242, 255, 102, 0.67) -53.1%,
-    rgba(255, 221, 136, 0.28) 49%
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 245, 102, 0.98) -53.1%,
+    white
   );
-  animation: gradient 5s ease infinite reverse;
-  background-size: 400% 400%;
+  animation: gradient 6s ease infinite reverse;
+  background-size: 150% 150%;
 }
