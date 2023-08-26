@@ -2,28 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.box-shadow-yellow {
-  box-shadow: 0 0 10px yellow;
-}
-.box-shadow-white {
-  box-shadow: 0 0 10px white;
-}
-.button {
-  box-shadow: 0 9px #999;
-}
-.button:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-.buttonSp {
-  box-shadow: 0 9px #383131;
-}
-.buttonSp:active {
-  box-shadow: 0 5px rgb(202, 202, 23);
-  transform: translateY(4px);
-}
 .font-roboto {
   font-family: "Roboto Mono", sans-serif;
+}
+.font-verdana {
+  font-family: "Verdana", "Geneva", "Tahoma", sans-serif;
 }
 
 /* SCROLL BAR HIDDEN */
@@ -56,63 +39,46 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-.css-selector {
-  -webkit-animation: animation1 30s ease infinite;
-  -moz-animation: animation1 30s ease infinite;
-  animation: animation1 30s ease infinite;
-
-  /* background-position: 50%; */
-}
-
-@-webkit-keyframes animation1 {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@-moz-keyframes animation1 {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes animation1 {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .background-animate {
-  -webkit-animation: gradient 15s ease infinite;
-  -moz-animation: gradient 15s ease infinite;
-  background: radial-gradient(#e0a71d, #ffffff, #ffc3a0,  #C4E6A0);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  background-color: #fdfdff;
+  opacity: 0.6;
+  background: radial-gradient(
+      circle,
+      transparent 20%,
+      #fdfdff 20%,
+      #fdfdff 80%,
+      transparent 80%,
+      transparent
+    ),
+    radial-gradient(
+        circle,
+        transparent 20%,
+        #fdfdff 20%,
+        #fdfdff 80%,
+        transparent 80%,
+        transparent
+      )
+      40px 40px,
+    linear-gradient(#f3f1cb 3.2px, transparent 3.2px) 0 -1.6px,
+    linear-gradient(90deg, #f3f1cb 3.2px, #fdfdff 3.2px) -1.6px 0;
+  background-size: 80px 80px, 80px 80px, 40px 40px, 40px 40px;
 }
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 25% 50%;
   }
   100% {
     background-position: 0% 50%;
   }
+}
+
+.inner-background {
+  background-color: #b499ff;
+  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  animation: gradient 10s ease infinite reverse;
+  background-size: 400% 400%;
+  backdrop-filter: 20rem;
 }

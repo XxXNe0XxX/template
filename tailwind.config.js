@@ -2,6 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    colors: {
+      main: "#1F2937",
+      secondary: "#1A2937",
+      black: "black",
+      whitetext: "white",
+      graytext: "gray",
+    },
+
     extend: {
       keyframes: {
         wiggle: {
