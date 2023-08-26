@@ -17,6 +17,10 @@ const Footer = ({ dataLength }) => {
       index: 2,
       title: "Projects",
     },
+    {
+      index: 3,
+      title: "Blog Posts",
+    },
   ];
 
   return (

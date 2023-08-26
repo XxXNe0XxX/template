@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Content = ({ data }) => {
   const { currentIndex } = useContent();
   return (
-    <div className="h-full inner-background  shadow-lg  my-10 border border-graytext sm:rounded-3xl  min-h-fit flex  items-center  lg:w-[80vw] md:w-[90vw] px-10    ">
+    <div className="h-full  my-10    min-h-fit flex  items-center  lg:w-[80vw] md:w-[90vw] px-10    ">
       {data.map((each, i) => (
         <motion.div
           key={i}

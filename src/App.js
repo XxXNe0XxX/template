@@ -3,6 +3,7 @@ import Content from "./Content";
 import Footer from "./Footer";
 import ContentProvider from "./ContentContext";
 import React from "react";
+import BlogPosts from "./BlogPosts";
 
 const App = () => {
   const content = [
@@ -64,10 +65,14 @@ const App = () => {
         </>
       ),
     },
+    {
+      index: 3,
+      item: <BlogPosts></BlogPosts>,
+    },
   ];
 
   return (
-    <div className="no-scrollbar  font-verdana">
+    <div className="no-scrollbar inner-background  font-verdana">
       <div className="flex h-screen  flex-col z-10 justify-between items-center  content-center relative ">
         <div className="absolute h-full w-full background-animate -z-10"></div>
         <ContentProvider>
