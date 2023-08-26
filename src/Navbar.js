@@ -32,7 +32,7 @@ const Navbar = () => {
     <>
       {/* <div className="absolute background-animate bg-gradient-to-tr from-black to-blue-500 -z-10 "></div> */}
       {/* <div className="absolute h-screen w-[50vw] bg-green-200 right-0 bottom-0 -z-10 "></div> */}
-      <nav className="flex lg:h-20  h-16 w-[90vw] justify-between items-center mx-auto ">
+      <nav className="flex lg:h-20 bg-whitetext h-16 w-[90vw] justify-between items-center mx-auto ">
         <div className="flex items-center gap-x-2 w-full">
           <div className="w-16 lg:inline-block md:inline-block hidden bg-black h-[2px] rounded-lg"></div>
           <motion.h1

@@ -76,9 +76,11 @@ body {
 }
 
 .inner-background {
-  background-color: #b499ff;
-  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
-  animation: gradient 10s ease infinite reverse;
+  background: linear-gradient(
+    44.8deg,
+    rgba(242, 255, 102, 0.67) -53.1%,
+    rgba(255, 221, 136, 0.28) 49%
+  );
+  animation: gradient 5s ease infinite reverse;
   background-size: 400% 400%;
-  backdrop-filter: 20rem;
 }

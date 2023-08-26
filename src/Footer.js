@@ -20,7 +20,7 @@ const Footer = ({ dataLength }) => {
   ];
 
   return (
-    <div className="h-[10vh] pb-2  w-full lg:w-[80vw] md:w-[90vw] flex flex-col justify-between lg:h-44">
+    <div className="h-[10vh] pb-2  w-full lg:w-[80vw] md:w-[90vw] space-y-6 flex flex-col justify-start lg:h-44">
       <ul className=" flex justify-center w-full ">
         {pages.map((each, i) => (
           <button
@@ -43,9 +43,9 @@ const Footer = ({ dataLength }) => {
           </button>
         ))}
       </ul>
-      <div className="w-full h-fit flex md:justify-around justify-around">
+      <div className="w-full h-fit flex md:justify-between mx-auto justify-around">
         <button
-          className={`py-2 px-4 scale-150 transition-all ${
+          className={` px-4 scale-150 transition-all ${
             currentIndex === 0 ? " text-graytext " : ""
           }`}
           onClick={() =>
@@ -56,7 +56,7 @@ const Footer = ({ dataLength }) => {
         </button>
 
         <button
-          className={`py-2 px-4 scale-150  transition-all ${
+          className={` px-4 scale-150  transition-all ${
             currentIndex === dataLength - 1 ? "  text-graytext " : ""
           }`}
           onClick={() =>
