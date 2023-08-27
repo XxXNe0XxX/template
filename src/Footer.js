@@ -11,11 +11,11 @@ const Footer = ({ dataLength }) => {
     },
     {
       index: 1,
-      title: "Certifications",
+      title: "Projects",
     },
     {
       index: 2,
-      title: "Projects",
+      title: "About Me",
     },
     {
       index: 3,

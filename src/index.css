@@ -82,11 +82,7 @@ body {
 }
 
 .inner-background {
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 245, 102, 0.98) -53.1%,
-    white
-  );
-  animation: gradient 6s ease infinite reverse;
+  background: radial-gradient(circle at center, #b08516, white, yellow);
+  animation: gradient 10s ease infinite reverse;
   background-size: 150% 150%;
 }
