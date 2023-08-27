@@ -41,7 +41,7 @@ const Projects = () => {
             <h1 className="font-serif background-animate p-4 text-md line-clamp-2 lg:text-2xl text-md font-bold tracking-wide  ">
               {each.title}
             </h1>
-            <p className=" lg:text-base p-4 opacity-0 group-hover:opacity-100  group-hover:pb-40  backdrop-blur-3xl  transition-all text-md line-clamp-3">
+            <p className=" overflow-y-scroll no-scrollbar lg:text-base p-4 opacity-0 group-hover:opacity-100  group-hover:pb-40  backdrop-blur-3xl  transition-all text-md line-clamp-3">
               {each.description}
             </p>
             <p className="group-hover:opacity-0 text-whitetext rounded-md  absolute transition-all bottom-0 right-0 p-2 animate-bounce ">
