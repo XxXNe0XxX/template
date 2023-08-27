@@ -58,9 +58,9 @@ const AboutMe = () => {
           Software Developer | Computer Scientist | Data Scientist | Back-End
           Developer
         </p>
-        <div className="flex  overflow-hidden content-center items-center justify-center object-cover ">
+        <div className="flex rounded-xl overflow-hidden content-center items-center justify-center object-cover ">
           <img
-            className="w-56 rounded-e-xl"
+            className="w-56 "
             src="images/Pepi.jpg"
             alt="my profile pic"
           ></img>

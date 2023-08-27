@@ -58,7 +58,7 @@ const BlogPosts = () => {
             <h1 className="font-bold lg:text-lg text-md line-clamp-2 font-serif">
               {each.title}
             </h1>
-            <div className="w-[90%] h-[1px] bg-graytext mx-auto"></div>
+            <div className="w-full h-[1px] bg-graytext mx-auto"></div>
             <p className=" line-clamp-6 lg:text-base text-sm py-1 ">
               {each.description}
             </p>
