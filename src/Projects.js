@@ -3,62 +3,56 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title:
-        "Eiusmod minim Lorem aute cillum nisi id consectetur proident eiusmod ipsum.",
+      title: "Breast Cancer Diagnosis Using Machine Learning",
       description:
-        "Tempor non elit aliqua commodo fugiat commodo amet minim excepteur culpa mollit cillum ea. Duis irure laboris ea elit elit sint laborum officia. Veniam pariatur cillum ullamco.",
-      gridPos: "lg:col-span-2 col-span-3",
+        "Implemented predictive models to diagnose breast cancer based on the Breast Cancer Wisconsin dataset.*- Utilized various machine learning algorithms, including Support Vector Machines, Random Forest, Decision Trees, and Multi-Layer Perceptron (MLP) classifier.- Employed data preprocessing techniques such as feature scaling and encoding.- Tuned hyperparameters using GridSearchCV to optimize model performance.- Achieved the highest accuracy with the MLP classifier, demonstrating strong predictive power.",
+      gridPos: "",
       animationDuration: 2,
+      image: "/images/breast-cancer.webp",
+      imageAlt: "breast cancer",
     },
     {
       id: 2,
-      title: "Aliqua non elit sunt irure consequat do consequat ad nulla.",
+      title: "World CO2 Emission Dashboard",
       description:
-        "Tempor non elit aliqua commodo fugiat commodo amet minim excepteur culpa mollit cillum ea. Duis irure laboris ea elit elit sint laborum officia. Veniam pariatur cillum ullamco.",
-      gridPos: "lg:col-span-1 col-span-3",
+        "This project involves an interactive application that analyzes and visualizes CO2 emission data over time, focusing on different continents and emission sources. It utilizes Python and libraries such as pandas, panel, and hvplot to process and visualize the data.",
+      gridPos: "",
       animationDuration: 2,
-    },
-    {
-      id: 3,
-      title: "Dolore consectetur proident nisi dolor excepteur cillum.",
-      description:
-        "Tempor non elit aliqua commodo fugiat commodo amet minim excepteur culpa mollit cillum ea. Duis irure laboris ea elit elit sint laborum officia. Veniam pariatur cillum ullamco.",
-      gridPos: "lg:col-span-1 col-span-3",
-      animationDuration: 1.5,
-    },
-    {
-      id: 4,
-      title: "Dolore consectetur proident nisi dolor excepteur cillum.",
-      description:
-        "Tempor non elit aliqua commodo fugiat commodo amet minim excepteur culpa mollit cillum ea. Duis irure laboris ea elit elit sint laborum officia. Veniam pariatur cillum ullamco.",
-      gridPos: "lg:col-span-2 col-span-3",
-      animationDuration: 1.5,
-    },
-    {
-      id: 5,
-      title: "Dolore consectetur proident nisi dolor excepteur cillum.",
-      description:
-        "Tempor non elit aliqua commodo fugiat commodo amet minim excepteur culpa mollit cillum ea. Duis irure laboris ea elit elit sint laborum officia. Veniam pariatur cillum ullamco.",
-      gridPos: "lg:col-span-3 col-span-3",
-      animationDuration: 1.5,
+      image: "/images/co2.jpg",
+      imageAlt: "Co2 contamination",
     },
   ];
+
   return (
-    <div className="overflow-y-scroll no-scrollbar h-[65vh]">
-      <div className="lg:grid lg:grid-rows-3 lg:grid-cols-3 lg:flex-none flex flex-col  content-center items-center overflow-y-scroll snap-y snap-mandatory justify-center  gap-4 no-scrollbar">
+    <div className="h-full md:w-full  w-[85vw] ">
+      <div className="no-scrollbar   space-x-5 p-1 snap-x snap-mandatory  overflow-x-scroll  flex    ">
         {projects.map((each) => (
           <motion.div
-            className={` ${each.gridPos} h-40 rounded-lg snap-start  overflow-hidden backdrop-blur-sm shadow-lg  lg:p-4 p-2 border border-graytext  `}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className={` ${each.gridPos} relative border-4  border-graytext flex flex-col justify-between h-[60vh]  group snap-start  md:min-w-full min-w-[85vw]  rounded-md  backdrop-blur-sm     `}
           >
-            <h1 className="font-serif text-md font-bold line-clamp-2 lg:text-base text-md ">
+            <img
+              className="absolute w-full h-full blur-[2px] -z-10 object-cover"
+              alt={each.alt}
+              src={each.image}
+            ></img>
+            <h1 className="font-serif background-animate p-4 text-md line-clamp-2 lg:text-2xl text-md font-bold tracking-wide  ">
               {each.title}
             </h1>
-            <p className="lg:text-base text-sm line-clamp-3">
+            <p className=" lg:text-base p-4 opacity-0 group-hover:opacity-100  group-hover:pb-40  backdrop-blur-3xl  transition-all text-md line-clamp-3">
               {each.description}
+            </p>
+            <p className="group-hover:opacity-0 text-whitetext rounded-md  absolute transition-all bottom-0 right-0 p-2 animate-bounce ">
+              ...
             </p>
           </motion.div>
         ))}
       </div>
+      <p className=" w-full text-right animate-pulse lg:text-base text-xs">
+        Scroll to see more...
+      </p>
     </div>
   );
 };
