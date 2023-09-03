@@ -24,8 +24,8 @@ const Projects = () => {
   ];
 
   return (
-    <div className="h-full md:w-full  w-[85vw] ">
-      <div className="no-scrollbar   space-x-5 p-1 snap-x snap-mandatory  overflow-x-scroll  flex    ">
+    <div className=" lg:w-[90vw] md:w-[70vw] mx-[10%]   w-[85vw] ">
+      <div className="no-scrollbar  space-x-5 p-1 snap-x snap-mandatory  overflow-x-scroll  flex    ">
         {projects.map((each) => (
           <motion.div
             initial={{ opacity: 0 }}
@@ -38,7 +38,7 @@ const Projects = () => {
               alt={each.alt}
               src={each.image}
             ></img>
-            <h1 className="font-serif background-animate p-4 text-md line-clamp-2 lg:text-2xl text-md font-bold tracking-wide  ">
+            <h1 className="font-serif  bg-whitetext p-4 text-md line-clamp-2 lg:text-2xl text-md tracking-wide  ">
               {each.title}
             </h1>
             <p className=" overflow-y-scroll no-scrollbar lg:text-base p-4 opacity-0 group-hover:opacity-100  group-hover:pb-40  backdrop-blur-3xl  transition-all text-md line-clamp-3">

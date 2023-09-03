@@ -12,7 +12,7 @@ const App = () => {
     {
       index: 0,
       item: (
-        <div className="flex space-y-10 lg:space-x-20 lg:flex-row flex-col justify-between items-start">
+        <div className="flex p-4 space-y-10 lg:space-x-20 space-x-0 lg:flex-row flex-col justify-between items-start">
           <div className="flex space-y-4 flex-col ">
             <h1 className=" tracking-tighter font-serif lg:text-8xl  text-4xl w-full  line-clamp-3  ">
               Tempor est culpa officia pariatur enim incididunt veniam

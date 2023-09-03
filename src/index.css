@@ -86,3 +86,51 @@ body {
   animation: gradient 10s ease infinite reverse;
   background-size: 150% 150%;
 }
+
+.animate-updown {
+  animation: updown 2s ease-in-out alternate infinite;
+}
+@keyframes updown {
+  0% {
+    padding-bottom: 0px;
+  }
+  50% {
+    margin-bottom: 20px;
+  }
+  100% {
+    padding-bottom: 0px;
+  }
+}
+
+.custom-shadow {
+  /* box-shadow: 5px 0 3px -3px #00000030;
+  box-shadow: -5px 0 3px -3px #00000030; */
+  /* box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white,
+    12px 0 15px -4px rgba(31, 73, 125, 0.8),
+    -12px 0 15px -4px rgba(31, 73, 125, 0.8); */
+}
+
+.custom-shadow:before,
+.custom-shadow:after {
+  content: " ";
+  height: 89%;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+.custom-shadow:before {
+  box-shadow: -15px 0 15px -15px inset;
+  left: -15px;
+}
+.custom-shadow:after {
+  box-shadow: 15px 0 15px -15px inset;
+  right: 0px;
+}
+
+.custom-shadow {
+  /* background: #eeeeee; */
+  /* height: 100px; */
+  /* margin: 0 50px; */
+  /* width: 100px; */
+  position: relative;
+}

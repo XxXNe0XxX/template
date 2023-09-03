@@ -24,7 +24,7 @@ const Footer = ({ dataLength }) => {
   ];
 
   return (
-    <div className="h-[10vh] pb-2  w-full lg:w-[80vw] md:w-[90vw] space-y-6 flex flex-col justify-start lg:h-44">
+    <div className="h-[10vh] pb-2 sm:px-0 px-3  w-full lg:w-[80vw] md:w-[90vw] space-y-6 flex flex-col justify-start lg:h-44">
       <ul className=" flex justify-center w-full ">
         {pages.map((each, i) => (
           <button
